@@ -47,23 +47,25 @@
       </div>
     </section>
 
-    <section class="tools-strip" aria-labelledby="tools-title">
-      <div class="wrap tools-intro">
-        <h2 id="tools-title">Daybook y tus herramientas</h2>
-        <p>El instalador configura OpenCode, Codex, Antigravity y Claude Code. Para Cursor, JetBrains y otros clientes MCP, la configuración es manual y depende de que el cliente admita servidores por stdio; consulta su documentación.</p>
-        <button class="motion-toggle" type="button" hidden aria-pressed="false">Pausar movimiento</button>
-      </div>
-      <div class="ticker" aria-hidden="true">
+    <section class="tools-strip" aria-label="Herramientas">
+      <div class="ticker">
         <div class="ticker-track">
-          <!-- OpenCode: opencode.ai/brand; Cursor: cursor.com header; JetBrains: jetbrains.com/icon.svg. -->
-          <div class="ticker-group"><strong class="tool-wordmark"><svg viewBox="0 0 640 115" width="117" height="21" fill="none"><path d="M49.2308 32.8573H16.4103V82.143H49.2308V32.8573ZM65.641 98.5716H0V16.4287H65.641V98.5716ZM98.4649 82.143H131.285V32.8573H98.4649V82.143ZM147.696 98.5716H98.4649V115H82.0547V16.4287H147.696V98.5716ZM229.743 65.7144H180.512V82.143H229.743V98.5716H164.102V16.4287H229.743V65.7144ZM180.512 49.2859H213.332V32.8573H180.512V49.2859ZM295.387 32.8573H262.567V98.5716H246.156V16.4287H295.387V32.8573ZM311.797 98.5716H295.387V32.8573H311.797V98.5716ZM393.844 32.8573H344.613V82.143H393.844V98.5716H328.203V16.4287H393.844V32.8573ZM459.489 32.8573H426.668V82.143H459.489V32.8573ZM475.899 98.5716H410.258V16.4287H475.899V98.5716ZM541.535 32.8571H508.715V82.1428H541.535V32.8571ZM557.946 98.5714H492.305V16.4286H541.535V0H557.946V98.5714ZM590.77 32.8573V49.2859H623.59V32.8573H590.77ZM640 65.7144H590.77V82.143H640V98.5716H574.359V16.4287H640V65.7144Z" fill="#1F1F1F"/></svg></strong><strong>Codex</strong><strong>Antigravity</strong><strong>Claude Code</strong><strong class="tool-logo"><svg viewBox="0 0 500 545" width="28" height="30" fill="#26251e"><path d="m466.383 137.073-206.469-119.2034c-6.63-3.8287-14.811-3.8287-21.441 0l-206.4586 119.2034c-5.5734 3.218-9.0144 9.169-9.0144 15.615v240.375c0 6.436 3.441 12.397 9.0144 15.615l206.4686 119.203c6.63 3.829 14.811 3.829 21.441 0l206.468-119.203c5.574-3.218 9.015-9.17 9.015-15.615v-240.375c0-6.436-3.441-12.397-9.015-15.615zm-12.969 25.25-199.316 345.223c-1.347 2.326-4.904 1.376-4.904-1.319v-226.048c0-4.517-2.414-8.695-6.33-10.963l-195.7577-113.019c-2.3263-1.347-1.3764-4.905 1.3182-4.905h398.6305c5.661 0 9.199 6.136 6.368 11.041h-.009z"/></svg>Cursor</strong><strong class="tool-logo"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 32 32"><defs><linearGradient id="jetbrains-gradient-1" x1=".425" x2="31.31" y1="31.36" y2=".905" gradientUnits="userSpaceOnUse"><stop stop-color="#FF9419"/><stop offset=".43" stop-color="#FF021D"/><stop offset=".99" stop-color="#E600FF"/></linearGradient></defs><path fill="url(#jetbrains-gradient-1)" d="m10.17 1.83-8.34 8.34C.66 11.34 0 12.93 0 14.59V29.5C0 30.88 1.12 32 2.5 32h14.91c1.66 0 3.245-.66 4.42-1.83l8.34-8.34c1.17-1.17 1.83-2.76 1.83-4.42V2.5C32 1.12 30.88 0 29.5 0H14.59c-1.66 0-3.245.66-4.42 1.83Z"/><path fill="#000" d="M24 8H4v20h20V8Z"/><path fill="#fff" d="M15 24H6v2h9v-2Z"/></svg>JetBrains</strong></div>
-          <div class="ticker-group"><strong class="tool-wordmark"><svg viewBox="0 0 640 115" width="117" height="21" fill="none"><path d="M49.2308 32.8573H16.4103V82.143H49.2308V32.8573ZM65.641 98.5716H0V16.4287H65.641V98.5716ZM98.4649 82.143H131.285V32.8573H98.4649V82.143ZM147.696 98.5716H98.4649V115H82.0547V16.4287H147.696V98.5716ZM229.743 65.7144H180.512V82.143H229.743V98.5716H164.102V16.4287H229.743V65.7144ZM180.512 49.2859H213.332V32.8573H180.512V49.2859ZM295.387 32.8573H262.567V98.5716H246.156V16.4287H295.387V32.8573ZM311.797 98.5716H295.387V32.8573H311.797V98.5716ZM393.844 32.8573H344.613V82.143H393.844V98.5716H328.203V16.4287H393.844V32.8573ZM459.489 32.8573H426.668V82.143H459.489V32.8573ZM475.899 98.5716H410.258V16.4287H475.899V98.5716ZM541.535 32.8571H508.715V82.1428H541.535V32.8571ZM557.946 98.5714H492.305V16.4286H541.535V0H557.946V98.5714ZM590.77 32.8573V49.2859H623.59V32.8573H590.77ZM640 65.7144H590.77V82.143H640V98.5716H574.359V16.4287H640V65.7144Z" fill="#1F1F1F"/></svg></strong><strong>Codex</strong><strong>Antigravity</strong><strong>Claude Code</strong><strong class="tool-logo"><svg viewBox="0 0 500 545" width="28" height="30" fill="#26251e"><path d="m466.383 137.073-206.469-119.2034c-6.63-3.8287-14.811-3.8287-21.441 0l-206.4586 119.2034c-5.5734 3.218-9.0144 9.169-9.0144 15.615v240.375c0 6.436 3.441 12.397 9.0144 15.615l206.4686 119.203c6.63 3.829 14.811 3.829 21.441 0l206.468-119.203c5.574-3.218 9.015-9.17 9.015-15.615v-240.375c0-6.436-3.441-12.397-9.015-15.615zm-12.969 25.25-199.316 345.223c-1.347 2.326-4.904 1.376-4.904-1.319v-226.048c0-4.517-2.414-8.695-6.33-10.963l-195.7577-113.019c-2.3263-1.347-1.3764-4.905 1.3182-4.905h398.6305c5.661 0 9.199 6.136 6.368 11.041h-.009z"/></svg>Cursor</strong><strong class="tool-logo"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 32 32"><defs><linearGradient id="jetbrains-gradient-2" x1=".425" x2="31.31" y1="31.36" y2=".905" gradientUnits="userSpaceOnUse"><stop stop-color="#FF9419"/><stop offset=".43" stop-color="#FF021D"/><stop offset=".99" stop-color="#E600FF"/></linearGradient></defs><path fill="url(#jetbrains-gradient-2)" d="m10.17 1.83-8.34 8.34C.66 11.34 0 12.93 0 14.59V29.5C0 30.88 1.12 32 2.5 32h14.91c1.66 0 3.245-.66 4.42-1.83l8.34-8.34c1.17-1.17 1.83-2.76 1.83-4.42V2.5C32 1.12 30.88 0 29.5 0H14.59c-1.66 0-3.245.66-4.42 1.83Z"/><path fill="#000" d="M24 8H4v20h20V8Z"/><path fill="#fff" d="M15 24H6v2h9v-2Z"/></svg>JetBrains</strong></div>
+          <div class="ticker-group">
+            <strong class="tool-logo"><img src="assets/opencode.svg" alt="">OpenCode</strong>
+            <strong>Codex</strong>
+            <strong class="tool-logo"><img src="assets/antigravity.svg" alt="">Antigravity</strong>
+            <strong class="tool-logo"><img src="assets/claude-code.svg" alt="">Claude Code</strong>
+            <strong class="tool-logo"><img src="assets/cursor.svg" alt="">Cursor</strong><strong class="tool-logo"><img src="assets/jetbrains.svg" alt="">JetBrains</strong>
+            <strong class="tool-logo"><img src="assets/letta.jpg" alt="">Letta Code</strong>
+            <strong class="tool-logo"><img src="assets/hermes.png" alt="">Hermes Agent</strong>
+            <strong class="tool-logo"><img src="assets/mastra.svg" alt="">Mastra Code</strong>
+          </div>
         </div>
       </div>
     </section>
 
     <section class="section wrap" id="como-funciona" aria-labelledby="how-title">
-      <div class="section-heading"><div><h2 id="how-title">Menos volver a explicar.<br><span>Más seguir construyendo.</span></h2></div><p>El trabajo con agentes no siempre ocurre en una sola sesión. Daybook conserva la estructura y el contexto para poder retomarlo.</p></div>
+      <div class="section-heading"><div><h2 id="how-title">Menos volver a explicar.<br><span>Más seguir construyendo.</span></h2></div></div>
       <div class="bento" id="capacidades">
         <article class="tile tile-feature"><div class="feature-graphic" aria-hidden="true"><div class="graphic-card gc-one"><span>PROYECTO</span><b>Lo que estamos construyendo</b><div></div></div><div class="graphic-card gc-two"><span>CONTEXTO ACTIVO</span><b>Trabajo por retomar</b><div></div></div><div class="graphic-connector">↗</div></div><div><h3>Un punto de partida<br>para cada sesión.</h3><p>Consulta el trabajo activo, sus bloqueos y dependencias relevantes. Retoma con contexto, no desde cero.</p></div></article>
         <article class="tile tile-light"><div class="tile-icon" aria-hidden="true"><span>□</span><span>≡</span><span>✓</span></div><h3>Tu trabajo, en orden.</h3><p>Organiza proyectos con planes, fases y tareas. Registra avances y vuelve al historial cuando lo necesites.</p></article>
@@ -73,21 +75,42 @@
     </section>
 
     <section class="closing wrap" id="instalacion" aria-labelledby="start-title">
-      <div><h2 id="start-title">Dale continuidad<br><span>a tus ideas.</span></h2><p>Necesitas Node.js 24 o superior y npm. Con el tarball disponible en tu equipo, instala Daybook y selecciona qué clientes configurar.</p><a class="button button-primary" href="https://github.com/vmorenoz/daybook">Ver repositorio y documentación</a></div>
+      <div><h2 id="start-title">Dale continuidad<br><span>a tus ideas.</span></h2><a class="repo-link" href="https://github.com/vmorenoz/daybook"><svg aria-hidden="true" viewBox="0 0 16 16" width="20" height="20" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38l-.01-1.49c-2.23.48-2.7-1.07-2.7-1.07-.36-.92-.89-1.17-.89-1.17-.73-.5.06-.49.06-.49.8.06 1.22.82 1.22.82.71 1.22 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.65 7.65 0 0 1 4 0c1.53-1.03 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48l-.01 2.19c0 .21.15.46.55.38A8 8 0 0 0 8 0Z"/></svg>vmorenoz/daybook</a></div>
       <div class="install-card"><p>Desde la carpeta que contiene el tarball:</p><code>npm install -g ./alba-daybook-0.1.0.tgz --foreground-scripts</code><p class="install-note">Usa la ruta y el nombre reales del archivo. El repositorio explica cómo generar el tarball y configurar otros clientes manualmente.</p></div>
     </section>
   </main>
-  <footer class="footer wrap"><div><a class="brand footer-brand" href="#inicio"><svg class="brand-mark" viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M10 8.5h15.5A4.5 4.5 0 0 1 30 13v18H14.5A4.5 4.5 0 0 1 10 26.5v-18Z"/><path d="M10 26.5a4.5 4.5 0 0 1 4.5-4.5H30M16 14h8M16 18h5"/></svg><span>daybook<span class="brand-dot">.</span></span></a><p>Daybook nace de un problema real: perder el contexto entre sesiones de trabajo con agentes. Se ofrece como software de código abierto para que otros también puedan usarlo.</p></div><div class="footer-links"><a href="https://github.com/vicodev">Made by @vicodev</a><a href="https://vicodev.pe">vicodev.pe</a><a href="https://github.com/vmorenoz/daybook">Repositorio</a></div></footer>
+  <footer class="footer wrap"><div><a class="brand footer-brand" href="#inicio"><svg class="brand-mark" viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M10 8.5h15.5A4.5 4.5 0 0 1 30 13v18H14.5A4.5 4.5 0 0 1 10 26.5v-18Z"/><path d="M10 26.5a4.5 4.5 0 0 1 4.5-4.5H30M16 14h8M16 18h5"/></svg><span>daybook<span class="brand-dot">.</span></span></a><p>Daybook nace de un problema real: perder el contexto entre sesiones de trabajo con agentes. Se ofrece como software de código abierto para que otros también puedan usarlo.</p></div><div class="footer-links"><a href="https://github.com/vmorenoz">Made by @vmorenoz</a><a href="https://vicodev.pe">vicodev.pe</a></div></footer>
   <script>
-    const toggle = document.querySelector('.motion-toggle');
-    document.body.classList.add('motion-enabled');
-    toggle.hidden = false;
-    toggle.addEventListener('click', () => {
-      const paused = toggle.getAttribute('aria-pressed') === 'true';
-      toggle.setAttribute('aria-pressed', String(!paused));
-      document.querySelector('.ticker-track').classList.toggle('paused', !paused);
-      toggle.textContent = paused ? 'Pausar movimiento' : 'Reanudar movimiento';
-    });
+    const ticker = document.querySelector('.ticker');
+    const track = document.querySelector('.ticker-track');
+    const group = document.querySelector('.ticker-group');
+    const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+
+    function setupTicker() {
+      track.querySelectorAll('[data-clone]').forEach(clone => clone.remove());
+      document.body.classList.remove('motion-enabled');
+      if (reducedMotion.matches) return;
+      document.body.classList.add('motion-enabled');
+      const width = group.getBoundingClientRect().width;
+      if (!width) {
+        document.body.classList.remove('motion-enabled');
+        return;
+      }
+      const copies = Math.ceil(ticker.clientWidth / width) + 1;
+      for (let i = 0; i < copies; i++) {
+        const clone = group.cloneNode(true);
+        clone.dataset.clone = '';
+        clone.setAttribute('aria-hidden', 'true');
+        track.append(clone);
+      }
+      track.style.setProperty('--ticker-distance', `${width}px`);
+      track.style.setProperty('--ticker-duration', `${width / 45}s`);
+      document.body.classList.add('motion-enabled');
+    }
+    window.addEventListener('resize', setupTicker);
+    reducedMotion.addEventListener('change', setupTicker);
+    document.fonts.ready.then(setupTicker);
+    setupTicker();
   </script>
 </body>
 </html>
