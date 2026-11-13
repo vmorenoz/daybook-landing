@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Daybook guarda el contexto de trabajo de tus proyectos para que tus agentes puedan retomarlo.">
   <meta name="theme-color" content="#f4f5ef">
-  <title>Daybook — El contexto continúa</title>
+  <title>Daybook</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -14,32 +15,24 @@
 <body>
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
   <header class="header wrap">
-    <a class="brand" href="#inicio" aria-label="Daybook, inicio">
+    <div class="brand">
       <svg class="brand-mark" viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M10 8.5h15.5A4.5 4.5 0 0 1 30 13v18H14.5A4.5 4.5 0 0 1 10 26.5v-18Z"/><path d="M10 26.5a4.5 4.5 0 0 1 4.5-4.5H30M16 14h8M16 18h5"/></svg>
       <span>daybook<span class="brand-dot">.</span></span>
-    </a>
-    <nav aria-label="Navegación principal">
-      <a class="nav-link" href="#como-funciona">Cómo funciona</a>
-      <a class="nav-link" href="#capacidades">Capacidades</a>
-      <a class="button button-small" href="#instalacion">Empezar <span aria-hidden="true">↗</span></a>
-    </nav>
+    </div>
   </header>
 
   <main id="contenido">
     <section class="hero wrap" id="inicio" aria-labelledby="hero-title">
       <div class="hero-copy">
-        <p class="eyebrow"><span class="status-dot"></span> CONTEXTO PARA AGENTES</p>
         <h1 id="hero-title">El trabajo sigue.<br><span>El contexto también.</span></h1>
         <p class="hero-description">Una memoria de trabajo local para tus proyectos y los agentes que te ayudan a construirlos.</p>
         <div class="hero-actions">
-          <a class="button button-primary" href="#instalacion">Empezar con Daybook <span aria-hidden="true">↗</span></a>
+          <a class="button button-primary" href="#instalacion">Empezar con Daybook</a>
           <a class="text-link" href="#como-funciona">Descubre cómo funciona <span aria-hidden="true">↓</span></a>
         </div>
-        <p class="hero-note"><span aria-hidden="true">✳</span> Local por diseño &nbsp; / &nbsp; MCP por stdio</p>
       </div>
       <div class="hero-art" aria-hidden="true">
         <div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
-        <div class="art-label label-top"><span class="tiny-dot"></span> PROYECTO ACTIVO</div>
         <div class="notebook">
           <div class="notebook-top"><span>daybook / contexto</span><span>✳</span></div>
           <div class="notebook-body">
@@ -50,30 +43,51 @@
             <div class="notebook-row"><span class="circle"></span><span>Próximos pasos</span><span class="row-dots">···</span></div>
           </div>
         </div>
-        <div class="art-label label-bottom"><span class="sparkle">✳</span> LISTO PARA RETOMAR</div>
         <span class="art-cross cross-one">✳</span><span class="art-cross cross-two">+</span>
       </div>
     </section>
 
-    <div class="ticker" aria-label="Compatible con OpenCode, Codex, Antigravity y Claude Code">
-      <div class="wrap ticker-inner"><span>HECHO PARA TRABAJAR CON</span><strong>OpenCode</strong><i>✳</i><strong>Codex</strong><i>✳</i><strong>Antigravity</strong><i>✳</i><strong>Claude Code</strong></div>
-    </div>
+    <section class="tools-strip" aria-labelledby="tools-title">
+      <div class="wrap tools-intro">
+        <h2 id="tools-title">Daybook y tus herramientas</h2>
+        <p>El instalador configura OpenCode, Codex, Antigravity y Claude Code. Para Cursor, JetBrains y otros clientes MCP, la configuración es manual y depende de que el cliente admita servidores por stdio; consulta su documentación.</p>
+        <button class="motion-toggle" type="button" hidden aria-pressed="false">Pausar movimiento</button>
+      </div>
+      <div class="ticker" aria-hidden="true">
+        <div class="ticker-track">
+          <!-- OpenCode: opencode.ai/brand; Cursor: cursor.com header; JetBrains: jetbrains.com/icon.svg. -->
+          <div class="ticker-group"><strong class="tool-wordmark"><svg viewBox="0 0 640 115" width="117" height="21" fill="none"><path d="M49.2308 32.8573H16.4103V82.143H49.2308V32.8573ZM65.641 98.5716H0V16.4287H65.641V98.5716ZM98.4649 82.143H131.285V32.8573H98.4649V82.143ZM147.696 98.5716H98.4649V115H82.0547V16.4287H147.696V98.5716ZM229.743 65.7144H180.512V82.143H229.743V98.5716H164.102V16.4287H229.743V65.7144ZM180.512 49.2859H213.332V32.8573H180.512V49.2859ZM295.387 32.8573H262.567V98.5716H246.156V16.4287H295.387V32.8573ZM311.797 98.5716H295.387V32.8573H311.797V98.5716ZM393.844 32.8573H344.613V82.143H393.844V98.5716H328.203V16.4287H393.844V32.8573ZM459.489 32.8573H426.668V82.143H459.489V32.8573ZM475.899 98.5716H410.258V16.4287H475.899V98.5716ZM541.535 32.8571H508.715V82.1428H541.535V32.8571ZM557.946 98.5714H492.305V16.4286H541.535V0H557.946V98.5714ZM590.77 32.8573V49.2859H623.59V32.8573H590.77ZM640 65.7144H590.77V82.143H640V98.5716H574.359V16.4287H640V65.7144Z" fill="#1F1F1F"/></svg></strong><strong>Codex</strong><strong>Antigravity</strong><strong>Claude Code</strong><strong class="tool-logo"><svg viewBox="0 0 500 545" width="28" height="30" fill="#26251e"><path d="m466.383 137.073-206.469-119.2034c-6.63-3.8287-14.811-3.8287-21.441 0l-206.4586 119.2034c-5.5734 3.218-9.0144 9.169-9.0144 15.615v240.375c0 6.436 3.441 12.397 9.0144 15.615l206.4686 119.203c6.63 3.829 14.811 3.829 21.441 0l206.468-119.203c5.574-3.218 9.015-9.17 9.015-15.615v-240.375c0-6.436-3.441-12.397-9.015-15.615zm-12.969 25.25-199.316 345.223c-1.347 2.326-4.904 1.376-4.904-1.319v-226.048c0-4.517-2.414-8.695-6.33-10.963l-195.7577-113.019c-2.3263-1.347-1.3764-4.905 1.3182-4.905h398.6305c5.661 0 9.199 6.136 6.368 11.041h-.009z"/></svg>Cursor</strong><strong class="tool-logo"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 32 32"><defs><linearGradient id="jetbrains-gradient-1" x1=".425" x2="31.31" y1="31.36" y2=".905" gradientUnits="userSpaceOnUse"><stop stop-color="#FF9419"/><stop offset=".43" stop-color="#FF021D"/><stop offset=".99" stop-color="#E600FF"/></linearGradient></defs><path fill="url(#jetbrains-gradient-1)" d="m10.17 1.83-8.34 8.34C.66 11.34 0 12.93 0 14.59V29.5C0 30.88 1.12 32 2.5 32h14.91c1.66 0 3.245-.66 4.42-1.83l8.34-8.34c1.17-1.17 1.83-2.76 1.83-4.42V2.5C32 1.12 30.88 0 29.5 0H14.59c-1.66 0-3.245.66-4.42 1.83Z"/><path fill="#000" d="M24 8H4v20h20V8Z"/><path fill="#fff" d="M15 24H6v2h9v-2Z"/></svg>JetBrains</strong></div>
+          <div class="ticker-group"><strong class="tool-wordmark"><svg viewBox="0 0 640 115" width="117" height="21" fill="none"><path d="M49.2308 32.8573H16.4103V82.143H49.2308V32.8573ZM65.641 98.5716H0V16.4287H65.641V98.5716ZM98.4649 82.143H131.285V32.8573H98.4649V82.143ZM147.696 98.5716H98.4649V115H82.0547V16.4287H147.696V98.5716ZM229.743 65.7144H180.512V82.143H229.743V98.5716H164.102V16.4287H229.743V65.7144ZM180.512 49.2859H213.332V32.8573H180.512V49.2859ZM295.387 32.8573H262.567V98.5716H246.156V16.4287H295.387V32.8573ZM311.797 98.5716H295.387V32.8573H311.797V98.5716ZM393.844 32.8573H344.613V82.143H393.844V98.5716H328.203V16.4287H393.844V32.8573ZM459.489 32.8573H426.668V82.143H459.489V32.8573ZM475.899 98.5716H410.258V16.4287H475.899V98.5716ZM541.535 32.8571H508.715V82.1428H541.535V32.8571ZM557.946 98.5714H492.305V16.4286H541.535V0H557.946V98.5714ZM590.77 32.8573V49.2859H623.59V32.8573H590.77ZM640 65.7144H590.77V82.143H640V98.5716H574.359V16.4287H640V65.7144Z" fill="#1F1F1F"/></svg></strong><strong>Codex</strong><strong>Antigravity</strong><strong>Claude Code</strong><strong class="tool-logo"><svg viewBox="0 0 500 545" width="28" height="30" fill="#26251e"><path d="m466.383 137.073-206.469-119.2034c-6.63-3.8287-14.811-3.8287-21.441 0l-206.4586 119.2034c-5.5734 3.218-9.0144 9.169-9.0144 15.615v240.375c0 6.436 3.441 12.397 9.0144 15.615l206.4686 119.203c6.63 3.829 14.811 3.829 21.441 0l206.468-119.203c5.574-3.218 9.015-9.17 9.015-15.615v-240.375c0-6.436-3.441-12.397-9.015-15.615zm-12.969 25.25-199.316 345.223c-1.347 2.326-4.904 1.376-4.904-1.319v-226.048c0-4.517-2.414-8.695-6.33-10.963l-195.7577-113.019c-2.3263-1.347-1.3764-4.905 1.3182-4.905h398.6305c5.661 0 9.199 6.136 6.368 11.041h-.009z"/></svg>Cursor</strong><strong class="tool-logo"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 32 32"><defs><linearGradient id="jetbrains-gradient-2" x1=".425" x2="31.31" y1="31.36" y2=".905" gradientUnits="userSpaceOnUse"><stop stop-color="#FF9419"/><stop offset=".43" stop-color="#FF021D"/><stop offset=".99" stop-color="#E600FF"/></linearGradient></defs><path fill="url(#jetbrains-gradient-2)" d="m10.17 1.83-8.34 8.34C.66 11.34 0 12.93 0 14.59V29.5C0 30.88 1.12 32 2.5 32h14.91c1.66 0 3.245-.66 4.42-1.83l8.34-8.34c1.17-1.17 1.83-2.76 1.83-4.42V2.5C32 1.12 30.88 0 29.5 0H14.59c-1.66 0-3.245.66-4.42 1.83Z"/><path fill="#000" d="M24 8H4v20h20V8Z"/><path fill="#fff" d="M15 24H6v2h9v-2Z"/></svg>JetBrains</strong></div>
+        </div>
+      </div>
+    </section>
 
     <section class="section wrap" id="como-funciona" aria-labelledby="how-title">
-      <div class="section-heading"><div><p class="eyebrow">01 / LA IDEA</p><h2 id="how-title">Menos volver a explicar.<br><span>Más seguir construyendo.</span></h2></div><p>El trabajo con agentes no siempre ocurre en una sola sesión. Daybook conserva la estructura y el contexto para poder retomarlo.</p></div>
+      <div class="section-heading"><div><h2 id="how-title">Menos volver a explicar.<br><span>Más seguir construyendo.</span></h2></div><p>El trabajo con agentes no siempre ocurre en una sola sesión. Daybook conserva la estructura y el contexto para poder retomarlo.</p></div>
       <div class="bento" id="capacidades">
-        <article class="tile tile-feature"><div class="tile-number">01 <span>/ CONTEXTO</span></div><div class="feature-graphic" aria-hidden="true"><div class="graphic-card gc-one"><span>PROYECTO</span><b>Lo que estamos construyendo</b><div></div></div><div class="graphic-card gc-two"><span>CONTEXTO ACTIVO</span><b>Trabajo por retomar</b><div></div></div><div class="graphic-connector">↗</div></div><div><h3>Un punto de partida<br>para cada sesión.</h3><p>Consulta el trabajo activo, sus bloqueos y dependencias relevantes. Retoma con contexto, no desde cero.</p></div></article>
-        <article class="tile tile-light"><div class="tile-number">02 <span>/ ORGANIZACIÓN</span></div><div class="tile-icon" aria-hidden="true"><span>□</span><span>≡</span><span>✓</span></div><h3>Tu trabajo, en orden.</h3><p>Organiza proyectos con planes, fases y tareas. Registra avances y vuelve al historial cuando lo necesites.</p></article>
-        <article class="tile tile-dark"><div class="tile-number">03 <span>/ LOCAL</span></div><div class="database-icon" aria-hidden="true"><svg viewBox="0 0 96 96" fill="none"><ellipse cx="48" cy="26" rx="27" ry="10"/><path d="M21 26v20c0 5.5 12.1 10 27 10s27-4.5 27-10V26M21 46v20c0 5.5 12.1 10 27 10s27-4.5 27-10V46"/></svg></div><h3>Tus datos, en local.</h3><p>Daybook usa SQLite y guarda sus datos separados de los repositorios. Los documentos permanecen en tu proyecto.</p></article>
-        <article class="tile tile-wide"><div><div class="tile-number">04 <span>/ MCP</span></div><h3>Encaja en tu forma de trabajar.</h3><p>Una utilidad independiente que se conecta a clientes compatibles mediante MCP. Sin interfaz obligatoria ni una metodología impuesta.</p></div><div class="connection" aria-hidden="true"><span>tu agente</span><b>········ ↔ ········</b><span>daybook</span></div></article>
+        <article class="tile tile-feature"><div class="feature-graphic" aria-hidden="true"><div class="graphic-card gc-one"><span>PROYECTO</span><b>Lo que estamos construyendo</b><div></div></div><div class="graphic-card gc-two"><span>CONTEXTO ACTIVO</span><b>Trabajo por retomar</b><div></div></div><div class="graphic-connector">↗</div></div><div><h3>Un punto de partida<br>para cada sesión.</h3><p>Consulta el trabajo activo, sus bloqueos y dependencias relevantes. Retoma con contexto, no desde cero.</p></div></article>
+        <article class="tile tile-light"><div class="tile-icon" aria-hidden="true"><span>□</span><span>≡</span><span>✓</span></div><h3>Tu trabajo, en orden.</h3><p>Organiza proyectos con planes, fases y tareas. Registra avances y vuelve al historial cuando lo necesites.</p></article>
+        <article class="tile tile-dark"><div class="database-icon" aria-hidden="true"><svg viewBox="0 0 96 96" fill="none"><ellipse cx="48" cy="26" rx="27" ry="10"/><path d="M21 26v20c0 5.5 12.1 10 27 10s27-4.5 27-10V26M21 46v20c0 5.5 12.1 10 27 10s27-4.5 27-10V46"/></svg></div><h3>Tus datos, en local.</h3><p>Daybook usa SQLite y guarda sus datos separados de los repositorios. Los documentos permanecen en tu proyecto.</p></article>
+        <article class="tile tile-wide"><div><h3>Encaja en tu forma de trabajar.</h3><p>Una utilidad independiente que se conecta mediante MCP por stdio. La configuración manual depende de las capacidades de cada cliente; no requiere una interfaz ni una metodología impuesta.</p></div><div class="connection" aria-hidden="true"><span>tu agente</span><b>········ ↔ ········</b><span>daybook</span></div></article>
       </div>
     </section>
 
     <section class="closing wrap" id="instalacion" aria-labelledby="start-title">
-      <div><p class="eyebrow">02 / EMPIEZA AQUÍ</p><h2 id="start-title">Dale continuidad<br><span>a tus ideas.</span></h2><p>Necesitas Node.js 24 o superior y npm. Instala el tarball de Daybook y selecciona los clientes que quieres configurar.</p></div>
-      <div class="install-card"><div class="install-top"><span>INSTALACIÓN LOCAL</span><span aria-hidden="true">↗</span></div><p>Con el tarball disponible en tu equipo:</p><code>npm install -g ./daybook.tgz --foreground-scripts</code><p class="install-note">Sustituye <code>./daybook.tgz</code> por la ruta y el nombre reales del archivo. Durante la instalación podrás seleccionar tus clientes. <a href="https://github.com/vmorenoz/daybook#install-globally-from-a-tarball">Consulta las instrucciones de instalación</a>.</p></div>
+      <div><h2 id="start-title">Dale continuidad<br><span>a tus ideas.</span></h2><p>Necesitas Node.js 24 o superior y npm. Con el tarball disponible en tu equipo, instala Daybook y selecciona qué clientes configurar.</p><a class="button button-primary" href="https://github.com/vmorenoz/daybook">Ver repositorio y documentación</a></div>
+      <div class="install-card"><p>Desde la carpeta que contiene el tarball:</p><code>npm install -g ./alba-daybook-0.1.0.tgz --foreground-scripts</code><p class="install-note">Usa la ruta y el nombre reales del archivo. El repositorio explica cómo generar el tarball y configurar otros clientes manualmente.</p></div>
     </section>
   </main>
-  <footer class="footer wrap"><a class="brand footer-brand" href="#inicio"><svg class="brand-mark" viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M10 8.5h15.5A4.5 4.5 0 0 1 30 13v18H14.5A4.5 4.5 0 0 1 10 26.5v-18Z"/><path d="M10 26.5a4.5 4.5 0 0 1 4.5-4.5H30M16 14h8M16 18h5"/></svg><span>daybook<span class="brand-dot">.</span></span></a><p>Un poco de contexto hace mucho. <a href="https://github.com/vmorenoz/daybook">GitHub</a></p><a href="#inicio">Volver arriba ↑</a></footer>
+  <footer class="footer wrap"><div><a class="brand footer-brand" href="#inicio"><svg class="brand-mark" viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M10 8.5h15.5A4.5 4.5 0 0 1 30 13v18H14.5A4.5 4.5 0 0 1 10 26.5v-18Z"/><path d="M10 26.5a4.5 4.5 0 0 1 4.5-4.5H30M16 14h8M16 18h5"/></svg><span>daybook<span class="brand-dot">.</span></span></a><p>Daybook nace de un problema real: perder el contexto entre sesiones de trabajo con agentes. Se ofrece como software de código abierto para que otros también puedan usarlo.</p></div><div class="footer-links"><a href="https://github.com/vicodev">Made by @vicodev</a><a href="https://vicodev.pe">vicodev.pe</a><a href="https://github.com/vmorenoz/daybook">Repositorio</a></div></footer>
+  <script>
+    const toggle = document.querySelector('.motion-toggle');
+    document.body.classList.add('motion-enabled');
+    toggle.hidden = false;
+    toggle.addEventListener('click', () => {
+      const paused = toggle.getAttribute('aria-pressed') === 'true';
+      toggle.setAttribute('aria-pressed', String(!paused));
+      document.querySelector('.ticker-track').classList.toggle('paused', !paused);
+      toggle.textContent = paused ? 'Pausar movimiento' : 'Reanudar movimiento';
+    });
+  </script>
 </body>
 </html>
