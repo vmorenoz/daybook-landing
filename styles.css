@@ -43,7 +43,6 @@
 .closing-copy .button{margin-top:14px}
 .closing-art{display:block;width:100%;max-width:480px;height:auto;justify-self:center}
 
-/* Keep links unadorned while retaining non-color hover and keyboard cues. */
+/* Keep links unadorned while retaining keyboard focus cues. */
 a:any-link,a:any-link:any-link:hover,a:any-link:focus,a:any-link:active{text-decoration:none}
-a:not(.button):hover{outline:1px solid currentColor;outline-offset:4px}
 a:focus-visible{outline:3px solid #346b46;outline-offset:5px}
