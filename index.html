@@ -73,11 +73,22 @@
     </section>
 
     <section class="closing wrap" id="instalacion" aria-labelledby="start-title">
-      <div><h2 id="start-title">Dale continuidad<br><span>a tus ideas.</span></h2><a class="repo-link" href="https://github.com/vmorenoz/daybook"><svg aria-hidden="true" viewBox="0 0 16 16" width="20" height="20" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38l-.01-1.49c-2.23.48-2.7-1.07-2.7-1.07-.36-.92-.89-1.17-.89-1.17-.73-.5.06-.49.06-.49.8.06 1.22.82 1.22.82.71 1.22 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.65 7.65 0 0 1 4 0c1.53-1.03 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48l-.01 2.19c0 .21.15.46.55.38A8 8 0 0 0 8 0Z"/></svg>vmorenoz/daybook</a></div>
-      <div class="install-card"><p>Con Node.js 24 o superior y npm, sustituye la ruta por la del tarball que hayas generado:</p><code>TARBALL="/ruta/al/archivo.tgz"<br>npm install -g "$TARBALL" --foreground-scripts</code><p class="install-note">El repositorio explica cómo generar el tarball y configurar otros clientes manualmente.</p></div>
+      <div class="closing-copy">
+        <h2 id="start-title">El contexto tiene<br><span>un lugar al que volver.</span></h2>
+        <p>Tu agente consulta y registra el trabajo en Daybook mediante MCP. Los datos quedan en SQLite; los documentos, en tu proyecto.</p>
+        <a class="button button-primary" href="https://github.com/vmorenoz/daybook#instalación">Ver cómo instalar <span aria-hidden="true">↗</span></a>
+        <p class="install-note">Necesitas Node.js 24 o superior, npm y el paquete disponible en GitHub Releases.</p>
+      </div>
+      <div class="flow" aria-label="Flujo de contexto">
+        <div class="flow-node"><span class="flow-symbol" aria-hidden="true">✳</span><div><strong>Tu agente</strong><small>Consulta y registra</small></div></div>
+        <div class="flow-connector"><span aria-hidden="true">↕</span><span>MCP · stdio</span></div>
+        <div class="flow-node flow-node-daybook"><span class="flow-symbol" aria-hidden="true">▤</span><div><strong>Daybook</strong><small>Contexto de trabajo</small></div></div>
+        <div class="flow-connector"><span aria-hidden="true">↓</span><span>Datos y referencias</span></div>
+        <div class="flow-storage"><div><strong>SQLite</strong><small>Datos y rutas</small></div><div><strong>Tu proyecto</strong><small>Documentos</small></div></div>
+      </div>
     </section>
   </main>
-  <footer class="footer wrap"><div><a class="brand footer-brand" href="#inicio"><svg class="brand-mark" viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M10 8.5h15.5A4.5 4.5 0 0 1 30 13v18H14.5A4.5 4.5 0 0 1 10 26.5v-18Z"/><path d="M10 26.5a4.5 4.5 0 0 1 4.5-4.5H30M16 14h8M16 18h5"/></svg><span>daybook<span class="brand-dot">.</span></span></a><p>Daybook nace de un problema real: perder el contexto entre sesiones de trabajo con agentes. Se ofrece como software de código abierto para que otros también puedan usarlo.</p></div><div class="footer-links"><a href="https://github.com/vmorenoz">Made by @vmorenoz</a><a href="https://vicodev.pe">vicodev.pe</a></div></footer>
+  <footer class="footer wrap"><div><a class="brand footer-brand" href="#inicio"><svg class="brand-mark" viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M10 8.5h15.5A4.5 4.5 0 0 1 30 13v18H14.5A4.5 4.5 0 0 1 10 26.5v-18Z"/><path d="M10 26.5a4.5 4.5 0 0 1 4.5-4.5H30M16 14h8M16 18h5"/></svg><span>daybook<span class="brand-dot">.</span></span></a><p>Daybook nace de un problema real: perder el contexto entre sesiones de trabajo con agentes. Se ofrece como software de código abierto para que otros también puedan usarlo.</p></div><div class="footer-links"><a href="https://github.com/vmorenoz/daybook">Daybook en GitHub ↗</a><a href="https://github.com/vmorenoz">Made by @vmorenoz</a><a href="https://vicodev.pe">vicodev.pe</a></div></footer>
   <script>
     const ticker = document.querySelector('.ticker');
     const track = document.querySelector('.ticker-track');

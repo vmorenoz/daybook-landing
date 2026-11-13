@@ -36,3 +36,20 @@
 @media(max-width:560px){.motion-enabled .ticker-group{gap:40px;padding-right:40px}.footer{align-items:flex-start}}
 @media(prefers-reduced-motion:reduce){.motion-enabled .ticker-track{width:auto;animation:none;transform:none}.motion-enabled .ticker-group{width:100%;flex-wrap:wrap;justify-content:center;gap:18px 40px;padding:25px 20px}.ticker-group[data-clone]{display:none}}
 @media(prefers-reduced-motion:reduce){:root{scroll-behavior:auto}.button{transition:none}.button:hover{transform:none}}
+
+/* A compact map of where the work context lives. */
+.closing-copy>p{max-width:430px;color:var(--muted);font-size:13px}
+.closing-copy .button{margin-top:14px}
+.closing-copy .install-note{margin:16px 0 0;font-size:11px;line-height:1.7}
+.flow{background:#f6f9f3;border:1px solid #b9cdb7;border-radius:8px;padding:24px;min-width:0}
+.flow-node{display:flex;align-items:center;gap:14px;padding:13px 16px;border:1px solid #cbdac8;border-radius:6px;background:#fff}
+.flow-node-daybook{background:#dfead9;border-color:#b9cdb7}
+.flow-symbol{display:grid;place-items:center;width:38px;height:38px;flex:none;border-radius:5px;background:#e4eee0;color:#355d3c;font-size:21px;line-height:1}
+.flow-node-daybook .flow-symbol{background:#fff}
+.flow strong,.flow small{display:block;line-height:1.5}
+.flow strong{font-size:13px}.flow small{font-size:11px;color:#526158}
+.flow-connector{display:flex;align-items:center;gap:13px;padding:4px 0 4px 28px;color:#526d56;font-size:10px;font-weight:700}
+.flow-connector span:first-child{font-size:20px;line-height:1}
+.flow-storage{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.flow-storage>div{min-width:0;border:1px solid #cbdac8;border-radius:6px;padding:12px 14px}
+@media(max-width:560px){.flow{padding:16px}.flow-storage{gap:8px}.flow-storage>div{padding:10px}}
