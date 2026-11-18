@@ -27,15 +27,13 @@ a:focus-visible { outline: 3px solid #ba6815; outline-offset: 4px; }
 .skip { position: absolute; left: 1rem; top: -5rem; z-index: 4; padding: .65rem; background: white; }
 .skip:focus { top: .5rem; }
 .wrap { width: min(1200px, 89%); margin-inline: auto; }
-.mast, footer, .mast nav, .brand, .actions, .button {
+.mast, footer, .brand, .actions, .button {
   display: flex; align-items: center;
 }
-.mast { justify-content: space-between; min-height: 80px; border-bottom: 1px solid var(--line); gap: 18px; }
+.mast { min-height: 80px; }
 .brand { font-size: 26px; letter-spacing: -.08em; font-weight: 700; line-height: 1; text-decoration: none; }
 .brand img { margin-right: 4px; }
 .brand span { color: var(--green); }
-.mast nav { gap: 30px; font-size: 13px; font-weight: 700; }
-nav a { padding-block: 8px; }
 .hero { display: grid; grid-template-columns: 1.07fr 1fr; align-items: center; gap: clamp(30px, 4vw, 64px); padding-block: clamp(48px, 6.3vw, 98px); }
 .entry-time, .book-label { text-transform: uppercase; font-size: 10px; font-weight: 700; letter-spacing: .13em; }
 h1 { margin-bottom: 20px; font-size: clamp(44px, 4.65vw, 70px); line-height: 1.12; letter-spacing: -.082em; text-wrap: balance; }
@@ -115,7 +113,6 @@ section[id] { scroll-margin-top: 22px; }
 @media (max-width: 700px) {
   .wrap { width: min(91%, 510px); }
   .mast { min-height: 68px; }
-  .mast nav { gap: 14px; font-size: 12px; }
   .hero, .notes-grid, .install { grid-template-columns: 1fr; gap: 24px; }
   .hero { padding-block: 40px 28px; }
   h1 { font-size: clamp(40px, 9vw, 54px); }
@@ -132,7 +129,6 @@ section[id] { scroll-margin-top: 22px; }
   footer .site { display: block; margin: 4px 0 0; padding: 0; border: 0; }
 }
 @media (max-width: 370px) {
-  .mast, .mast nav { gap: 8px; }
   .mast .brand { font-size: 22px; }
   .mast .brand img { width: 28px; height: 28px; }
 }
