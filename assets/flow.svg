@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <g id="record" stroke="#284c3b" stroke-width="1.8" stroke-linejoin="round">
+      <path d="m9 56 49 17 33-17-48-17z" fill="#b1c3a9" stroke="none"/>
+      <path d="m16 19 51 9v35L16 52z" fill="#97b498"/><path d="m20 16 51 9v34L20 48z" fill="#f7f7e8"/>
+      <path d="m20 48 51 11 14-7-50-11" fill="#e0e9c8" transform="translate(0 8)"/>
+      <path d="m28 28 5 5-5 3m10 0 12 2" fill="none"/><path d="m57 13 18-7 12 8-19 7-7 8 1-7-5-2z" fill="#d2e799"/>
+    </g>
+    <g id="store" stroke="#284c3b" stroke-width="1.8" stroke-linejoin="round">
+      <ellipse cx="51" cy="65" rx="31" ry="8" fill="#9daf99" stroke="none"/>
+      <path d="M24 24v31c0 15 54 15 54 0V24" fill="#8baa8e"/><path d="M24 35c0 15 54 15 54 0m-54 10c0 15 54 15 54 0" fill="none"/>
+      <ellipse cx="51" cy="24" rx="27" ry="11" fill="#d9e7c3"/><ellipse cx="51" cy="24" rx="16" ry="5.5" fill="#b4c9a2"/>
+      <path d="m56 52 17-4 11 5-18 5z" fill="#ecf1c4"/><path d="m56 52 10 6v11l-10-6z" fill="#9db77a"/><path d="m66 58 18-5v11l-18 5z" fill="#c5d993"/>
+    </g>
+    <g id="resume" stroke="#284c3b" stroke-width="1.8" stroke-linejoin="round">
+      <path d="m11 54 46 18 33-18-47-17z" fill="#b1c3a9" stroke="none"/>
+      <path d="m15 29 48 10 13-8-47-10z" fill="#e5ecd2"/><path d="m15 29 48 10v26L15 54z" fill="#a3b99c"/><path d="m63 39 13-8v26l-13 8z" fill="#729178"/>
+      <path d="m22 17 51 10v27L22 43z" fill="#f9f8e9"/><path d="m30 29 6 6 10-8" fill="none"/><path d="m51 34 16 3m-16 2 10 2" fill="none"/>
+      <path d="m66 22 12-7m-7 0 8-1-2 8" fill="none"/>
+    </g>
+  </defs>
+</svg>

@@ -3,132 +3,90 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Daybook guarda el contexto de trabajo de tus proyectos para que tus agentes puedan retomarlo.">
-  <meta name="theme-color" content="#f4f5ef">
-  <title>Daybook</title>
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <meta name="theme-color" content="#f8f9f2">
+  <meta name="description" content="Una bitácora local y de código abierto para retomar proyectos con agentes de IA. Guarda tareas, decisiones y bloqueos en SQLite y consúltalos por MCP o desde la terminal.">
+  <title>Daybook — Memoria local para tus agentes de IA</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preload" href="assets/fonts/comfortaa-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=5">
+  <script src="harnesses.js" defer></script>
 </head>
 <body>
-  <a class="skip-link" href="#contenido">Saltar al contenido</a>
-  <header class="header wrap">
-    <div class="brand">
-      <svg class="brand-mark" viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M10 8.5h15.5A4.5 4.5 0 0 1 30 13v18H14.5A4.5 4.5 0 0 1 10 26.5v-18Z"/><path d="M10 26.5a4.5 4.5 0 0 1 4.5-4.5H30M16 14h8M16 18h5"/></svg>
-      <span>daybook<span class="brand-dot">.</span></span>
-    </div>
+  <a class="skip" href="#contenido">Saltar al contenido</a>
+  <header class="mast wrap">
+    <a class="brand" href="#inicio" aria-label="Daybook, inicio"><img src="favicon.svg" alt="" width="36" height="36">daybook<span>.</span></a>
+    <nav aria-label="Principal"><a href="#funcionamiento">Cómo funciona</a><a href="#instalar">Instalación</a></nav>
   </header>
-
   <main id="contenido">
-    <section class="hero wrap" id="inicio" aria-labelledby="hero-title">
-      <div class="hero-copy">
-        <h1 id="hero-title">El trabajo sigue.<br><span>El contexto también.</span></h1>
-        <p class="hero-description">Una memoria de trabajo local para tus proyectos y los agentes que te ayudan a construirlos.</p>
-        <div class="hero-actions">
-          <a class="button button-primary github-link" href="https://github.com/vmorenoz/daybook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .75a11.25 11.25 0 0 0-3.56 21.92c.56.1.77-.24.77-.54v-2.1c-3.14.68-3.8-1.33-3.8-1.33-.51-1.3-1.25-1.65-1.25-1.65-1.03-.7.08-.69.08-.69 1.14.08 1.74 1.17 1.74 1.17 1.01 1.73 2.65 1.23 3.3.94.1-.73.4-1.23.71-1.51-2.5-.29-5.13-1.25-5.13-5.57 0-1.23.44-2.24 1.16-3.03-.12-.28-.5-1.43.11-2.98 0 0 .95-.3 3.1 1.16a10.8 10.8 0 0 1 5.64 0c2.15-1.46 3.1-1.16 3.1-1.16.61 1.55.23 2.7.11 2.98.72.79 1.16 1.8 1.16 3.03 0 4.33-2.63 5.28-5.14 5.56.41.35.77 1.04.77 2.1v3.08c0 .3.2.65.78.54A11.25 11.25 0 0 0 12 .75Z"/></svg>Ver en GitHub</a>
-          <a class="text-link" href="#como-funciona">Descubre cómo funciona <span aria-hidden="true">↓</span></a>
-        </div>
+    <section class="hero wrap" id="inicio">
+      <div class="intro">
+        <h1>Retoma el proyecto <em>donde lo dejaste.</em></h1>
+        <p class="lead">Una bitácora local y de código abierto para tus agentes de IA. Guarda las decisiones y las tareas pendientes para que la próxima sesión empiece donde terminó la anterior.</p>
+        <div class="actions"><a class="button" href="#funcionamiento">Ver cómo funciona</a></div>
       </div>
-      <div class="hero-art" aria-hidden="true">
-        <div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
-        <div class="notebook">
-          <div class="notebook-top"><span>daybook / contexto</span><span>✳</span></div>
-          <div class="notebook-body">
-            <div class="notebook-heading"><span class="mini-icon">✳</span><span>El siguiente paso<br><strong>empieza aquí.</strong></span></div>
-            <div class="notebook-line long"></div><div class="notebook-line medium"></div>
-            <div class="notebook-divider"></div>
-            <div class="notebook-row"><span class="check">✓</span><span>Trabajo en curso</span><span class="row-dots">···</span></div>
-            <div class="notebook-row"><span class="circle"></span><span>Próximos pasos</span><span class="row-dots">···</span></div>
+      <figure class="specimen">
+        <div class="artboard">
+          <svg class="trail" viewBox="0 0 540 372" preserveAspectRatio="none" fill="none" aria-hidden="true">
+            <path d="M-30 267C65 279 79 245 104 171S197 61 261 77s97 47 151 17S499 9 570 22M-34 277C61 292 91 257 115 179s81-103 144-84 105 46 161 11S505 28 573 33M-40 288C64 307 101 265 126 186s79-94 135-72 109 37 166 3 91-76 144-73" stroke="currentColor"/>
+          </svg>
+          <div class="book">
+            <span class="ribbon" aria-hidden="true"></span>
+            <p class="book-label">Bitácora de ejemplo</p>
+            <h2>Portal de clientes</h2>
+            <div class="entry"><span class="entry-time">01 / AYER</span><strong>Decisión registrada</strong><p>El acceso será por correo, sin contraseña.</p></div>
+            <div class="entry"><span class="entry-time">02 / HOY</span><strong>Tarea por retomar</strong><p>Probar el enlace de acceso caducado.</p></div>
           </div>
         </div>
-        <span class="art-cross cross-one">✳</span><span class="art-cross cross-two">+</span>
-      </div>
+      </figure>
     </section>
-
-    <section class="tools-strip" aria-label="Herramientas">
-      <div class="ticker">
-        <div class="ticker-track">
-          <div class="ticker-group">
-            <strong class="tool-logo"><img src="assets/opencode.svg" width="29" height="29" alt="">OpenCode</strong>
-            <strong class="tool-logo"><img src="assets/openai.svg" width="29" height="29" alt="">Codex</strong>
-            <strong class="tool-logo"><img src="assets/antigravity.svg" width="29" height="29" alt="">Antigravity</strong>
-            <strong class="tool-logo"><img src="assets/claude-code.svg" width="29" height="29" alt="">Claude Code</strong>
-            <strong class="tool-logo"><img src="assets/cursor.svg" width="29" height="29" alt="">Cursor</strong><strong class="tool-logo"><img src="assets/jetbrains.svg" width="29" height="29" alt="">JetBrains</strong>
-            <strong class="tool-logo"><img src="assets/letta.jpg" width="29" height="29" alt="">Letta Code</strong>
-            <strong class="tool-logo"><img src="assets/hermes.png" width="29" height="29" alt="">Hermes Agent</strong>
-            <strong class="tool-logo"><img src="assets/mastra.svg" width="29" height="29" alt="">Mastra Code</strong>
-          </div>
-        </div>
-      </div>
+    <section class="clients" aria-label="Entornos de agentes">
+      <div class="ticker" id="harnesses"><div class="belt"><ul class="logos">
+          <li><img src="assets/opencode.svg" alt="" width="26" height="26">OpenCode</li>
+          <li><img src="assets/openai.svg" alt="" width="26" height="26">Codex</li>
+          <li><img src="assets/antigravity.svg" alt="" width="26" height="26">Antigravity</li>
+          <li><img src="assets/claude-code.svg" alt="" width="26" height="26">Claude Code</li>
+          <li><img src="assets/cursor.svg" alt="" width="26" height="26">Cursor</li>
+          <li><img src="assets/jetbrains.svg" alt="" width="26" height="26">JetBrains</li>
+          <li><img src="assets/letta.jpg" alt="" width="26" height="26">Letta Code</li>
+          <li><img src="assets/hermes.png" alt="" width="26" height="26">Hermes Agent</li>
+          <li><img src="assets/mastra.svg" alt="" width="26" height="26">Mastra Code</li>
+        </ul></div></div>
     </section>
-
-    <section class="section wrap" id="como-funciona" aria-labelledby="how-title">
-      <div class="section-heading"><div><h2 id="how-title">Menos volver a explicar.<br><span>Más seguir construyendo.</span></h2></div></div>
-      <div class="bento" id="capacidades">
-        <article class="tile tile-feature"><div class="feature-graphic" aria-hidden="true"><div class="graphic-card gc-one"><span>PROYECTO</span><b>Lo que estamos construyendo</b><div></div></div><div class="graphic-card gc-two"><span>CONTEXTO ACTIVO</span><b>Trabajo por retomar</b><div></div></div><div class="graphic-connector">↗</div></div><div><h3>Un punto de partida<br>para cada sesión.</h3><p>Consulta el trabajo activo, sus bloqueos y dependencias relevantes. Retoma con contexto, no desde cero.</p></div></article>
-        <article class="tile tile-light"><div class="tile-icon" aria-hidden="true"><span>□</span><span>≡</span><span>✓</span></div><h3>Tu trabajo, en orden.</h3><p>Organiza proyectos con planes, fases y tareas. Registra avances y vuelve al historial cuando lo necesites.</p></article>
-        <article class="tile tile-dark"><div class="database-icon" aria-hidden="true"><svg viewBox="0 0 96 96" fill="none"><ellipse cx="48" cy="26" rx="27" ry="10"/><path d="M21 26v20c0 5.5 12.1 10 27 10s27-4.5 27-10V26M21 46v20c0 5.5 12.1 10 27 10s27-4.5 27-10V46"/></svg></div><h3>Tus datos, en local.</h3><p>Daybook usa SQLite y guarda sus datos separados de los repositorios. Los documentos permanecen en tu proyecto.</p></article>
-        <article class="tile tile-wide"><div><h3>Encaja en tu forma de trabajar.</h3><p>Una utilidad independiente que se conecta mediante MCP por stdio. La configuración manual depende de las capacidades de cada cliente; no requiere una interfaz ni una metodología impuesta.</p></div><div class="connection" aria-hidden="true"><span>tu agente</span><b>········ ↔ ········</b><span>daybook</span></div></article>
-      </div>
+    <section class="workflow wrap" id="funcionamiento" aria-labelledby="workflow-title">
+      <h2 id="workflow-title">El recorrido de una decisión.</h2>
+      <figure class="flow" aria-labelledby="workflow-title">
+        <ol>
+          <li><div class="node"><svg aria-hidden="true" viewBox="0 0 100 80"><use href="assets/flow.svg#record"/></svg></div><small>01 · Primera sesión</small><h3>Tu agente registra</h3><p>«Anota que usaremos acceso por correo. Queda probar el enlace caducado».</p></li>
+          <li><div class="node"><svg aria-hidden="true" viewBox="0 0 100 80"><use href="assets/flow.svg#store"/></svg></div><small>02 · En tu equipo</small><h3>Daybook conserva</h3><p>El agente envía el acuerdo y la tarea por MCP. Daybook los asocia al proyecto y los guarda en SQLite.</p></li>
+          <li><div class="node"><svg aria-hidden="true" viewBox="0 0 100 80"><use href="assets/flow.svg#resume"/></svg></div><small>03 · Siguiente sesión</small><h3>Retomas la tarea</h3><p>«¿Qué faltaba probar?». El agente consulta Daybook y encuentra la prueba pendiente.</p></li>
+        </ol>
+      </figure>
     </section>
-
-    <section class="closing wrap" id="instalacion" aria-labelledby="start-title">
-      <div class="closing-copy">
-        <h2 id="start-title">El contexto tiene<br><span>un lugar al que volver.</span></h2>
-        <p>Tu agente consulta y registra el trabajo en Daybook mediante MCP. Los datos quedan en SQLite; los documentos, en tu proyecto.</p>
-        <a class="button button-primary github-link" href="https://github.com/vmorenoz/daybook#instalación"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .75a11.25 11.25 0 0 0-3.56 21.92c.56.1.77-.24.77-.54v-2.1c-3.14.68-3.8-1.33-3.8-1.33-.51-1.3-1.25-1.65-1.25-1.65-1.03-.7.08-.69.08-.69 1.14.08 1.74 1.17 1.74 1.17 1.01 1.73 2.65 1.23 3.3.94.1-.73.4-1.23.71-1.51-2.5-.29-5.13-1.25-5.13-5.57 0-1.23.44-2.24 1.16-3.03-.12-.28-.5-1.43.11-2.98 0 0 .95-.3 3.1 1.16a10.8 10.8 0 0 1 5.64 0c2.15-1.46 3.1-1.16 3.1-1.16.61 1.55.23 2.7.11 2.98.72.79 1.16 1.8 1.16 3.03 0 4.33-2.63 5.28-5.14 5.56.41.35.77 1.04.77 2.1v3.08c0 .3.2.65.78.54A11.25 11.25 0 0 0 12 .75Z"/></svg>Ver en GitHub</a>
+    <section class="fieldnotes" aria-labelledby="notes-title"><div class="wrap notes-grid">
+      <div class="section-intro"><h2 id="notes-title">Qué guarda Daybook.</h2>
+        <div class="prompt"><span>Prueba a pedirle a tu agente</span><q>¿Por qué elegimos el acceso por correo y qué queda por validar?</q></div>
       </div>
-      <svg class="closing-art" viewBox="0 0 480 340" role="img" aria-labelledby="closing-art-title closing-art-desc" xmlns="http://www.w3.org/2000/svg">
-        <title id="closing-art-title">Un lugar al que volver</title>
-        <desc id="closing-art-desc">Ilustración de un cuaderno rodeado por una línea continua, un documento y una estrella que evocan el contexto de un proyecto y su agente.</desc>
-        <ellipse cx="240" cy="174" rx="188" ry="119" fill="none" stroke="#a6c6a6" stroke-width="1.5" transform="rotate(-15 240 174)"/>
-        <path d="M74 196c-9-52 51-103 139-118m170 47c31 25 39 56 18 85-22 31-70 51-126 57" fill="none" stroke="#638d6b" stroke-width="2" stroke-linecap="round"/>
-        <circle cx="76" cy="195" r="5" fill="#638d6b"/>
-        <circle cx="401" cy="210" r="5" fill="#638d6b"/>
-        <path d="M157 89h142a13 13 0 0 1 13 13v151H171a14 14 0 0 1-14-14V89Z" fill="#b5d2b2"/>
-        <path d="M168 77h139a13 13 0 0 1 13 13v151H183a15 15 0 0 1-15-15V77Z" fill="#f4f5ef" stroke="#405d46" stroke-width="2"/>
-        <path d="M168 226a15 15 0 0 1 15-15h137M193 106h78M193 123h92M193 140h62" fill="none" stroke="#6e9673" stroke-width="2" stroke-linecap="round"/>
-        <path d="M193 175h15m9 0h35" fill="none" stroke="#405d46" stroke-width="2" stroke-linecap="round"/>
-        <circle cx="200" cy="175" r="13" fill="none" stroke="#a6c6a6" stroke-width="1.5"/>
-        <path d="M111 96h28v39h-28z" fill="#e9f1e5" stroke="#638d6b" stroke-width="1.5" stroke-linejoin="round"/>
-        <path d="M118 108h14m-14 7h14m-14 7h9" stroke="#638d6b" stroke-width="1.5" stroke-linecap="round"/>
-        <path d="M357 187c0 13-6 19-19 19 13 0 19 6 19 19 0-13 6-19 19-19-13 0-19-6-19-19Z" fill="#638d6b"/>
-        <path d="M344 92v12m-6-6h12M124 238v10m-5-5h10" stroke="#81aa84" stroke-width="1.5" stroke-linecap="round"/>
-      </svg>
+      <dl class="ledger">
+        <div><dt><span>01</span>Planes, fases y tareas</dt><dd>Registra una tarea independiente para un arreglo pequeño. Para una entrega mayor, agrupa las tareas por fases y relaciona las que dependen entre sí.</dd></div>
+        <div><dt><span>02</span>Acuerdos y bloqueos</dt><dd>Anota por qué se tomó una decisión o qué impide avanzar. Al retomar el proyecto, el agente puede consultar el bloqueo junto a la tarea afectada.</dd></div>
+        <div><dt><span>03</span>Historial que puedes consultar</dt><dd>Completar o cancelar una tarea conserva su recorrido. Si vuelve a ser relevante, puedes reabrirla sin perder las notas anteriores.</dd></div>
+      </dl>
+    </div></section>
+    <section class="install wrap" id="instalar" aria-labelledby="install-title">
+      <div class="closing-copy"><h2 id="install-title">Dale una bitácora<br>a tu próximo proyecto.</h2>
+        <p>Instala Daybook en tu equipo, elige tu cliente y pídele que registre la primera tarea.</p>
+        <a class="button pale" href="https://github.com/vmorenoz/daybook"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .75a11.25 11.25 0 0 0-3.56 21.92c.56.1.77-.24.77-.54v-2.1c-3.14.68-3.8-1.33-3.8-1.33-.51-1.3-1.25-1.65-1.25-1.65-1.03-.7.08-.69.08-.69 1.14.08 1.74 1.17 1.74 1.17 1.01 1.73 2.65 1.23 3.3.94.1-.73.4-1.23.71-1.51-2.5-.29-5.13-1.25-5.13-5.57 0-1.23.44-2.24 1.16-3.03-.12-.28-.5-1.43.11-2.98 0 0 .95-.3 3.1 1.16a10.8 10.8 0 0 1 5.64 0c2.15-1.46 3.1-1.16 3.1-1.16.61 1.55.23 2.7.11 2.98.72.79 1.16 1.8 1.16 3.03 0 4.33-2.63 5.28-5.14 5.56.41.35.77 1.04.77 2.1v3.08c0 .3.2.65.78.54A11.25 11.25 0 0 0 12 .75Z"/></svg>Ver en GitHub</a>
+        <small>Requisitos: Node.js 24 o posterior y npm.</small>
+      </div>
+      <div class="closing-art" aria-hidden="true"><svg viewBox="0 0 380 248" fill="none">
+        <g stroke="#77917c"><ellipse cx="188" cy="143" rx="173" ry="62" transform="rotate(-16 188 143)"/><ellipse cx="188" cy="143" rx="151" ry="50" transform="rotate(-16 188 143)" stroke-dasharray="2 7"/></g>
+        <g transform="translate(90 32) rotate(-12 94 91)"><path d="M6 40 114 6l87 41v114l-112 38-83-42z" fill="#669078" stroke="#adc2a8"/><path d="m6 143 83 41 112-38v12l-112 38-83-41z" fill="#e7ead3"/><path d="m6 40 83 41 112-34-87-41z" fill="#b6cf9e"/><path d="M6 40v104l83 40V81z" fill="#87a984"/><path d="m89 81 112-34v100l-112 37z" fill="#446c54"/><path d="m41 29 82 42 22-7-83-42z" fill="#e4eda7"/><path d="m123 71 22-7v47l-11-5-11 13z" fill="#d7e98e"/><path d="m19 71 53 26m-53-16 38 19" stroke="#344f3e" stroke-width="2"/></g>
+        <g fill="#d7e98e"><circle cx="28" cy="156" r="4"/><circle cx="342" cy="98" r="4"/><path d="m297 40 3 9 9 3-9 3-3 9-3-9-9-3 9-3z"/></g>
+      </svg></div>
     </section>
   </main>
-  <footer class="footer wrap"><div><a class="brand footer-brand" href="#inicio"><svg class="brand-mark" viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M10 8.5h15.5A4.5 4.5 0 0 1 30 13v18H14.5A4.5 4.5 0 0 1 10 26.5v-18Z"/><path d="M10 26.5a4.5 4.5 0 0 1 4.5-4.5H30M16 14h8M16 18h5"/></svg><span>daybook<span class="brand-dot">.</span></span></a><p>Daybook nace de un problema real: perder el contexto entre sesiones de trabajo con agentes. Se ofrece como software de código abierto para que otros también puedan usarlo.</p></div><div class="footer-links"><a href="https://github.com/vmorenoz/daybook">Daybook en GitHub</a><a href="https://github.com/vmorenoz">Made by @vmorenoz</a><a href="https://vicodev.pe">vicodev.pe</a></div></footer>
-  <script>
-    const ticker = document.querySelector('.ticker');
-    const track = document.querySelector('.ticker-track');
-    const group = document.querySelector('.ticker-group');
-    const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
-
-    function setupTicker() {
-      track.querySelectorAll('[data-clone]').forEach(clone => clone.remove());
-      document.body.classList.remove('motion-enabled');
-      if (reducedMotion.matches) return;
-      document.body.classList.add('motion-enabled');
-      const width = group.getBoundingClientRect().width;
-      if (!width) {
-        document.body.classList.remove('motion-enabled');
-        return;
-      }
-      const copies = Math.ceil(ticker.clientWidth / width) + 1;
-      for (let i = 0; i < copies; i++) {
-        const clone = group.cloneNode(true);
-        clone.dataset.clone = '';
-        clone.setAttribute('aria-hidden', 'true');
-        track.append(clone);
-      }
-      track.style.setProperty('--ticker-distance', `${width}px`);
-      track.style.setProperty('--ticker-duration', `${width / 45}s`);
-      document.body.classList.add('motion-enabled');
-    }
-    window.addEventListener('resize', setupTicker);
-    reducedMotion.addEventListener('change', setupTicker);
-    document.fonts.ready.then(setupTicker);
-    setupTicker();
-  </script>
+  <footer class="wrap"><a class="brand" href="#inicio"><img src="favicon.svg" alt="" width="32" height="32">daybook<span>.</span></a>
+    <p>Un proyecto open source de <a href="https://github.com/vmorenoz">@vmorenoz</a> <a class="site" href="https://vicodev.me">vicodev.me</a></p>
+  </footer>
 </body>
 </html>
